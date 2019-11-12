@@ -1,11 +1,6 @@
-/*
-Прочитайте данные о текущем количестве секунд таймера в переменную. Это будет стартовое значение таймера
-Каждую секунду уменьшайте значение таймера на 1
-По окончанию счёта выведите сообщение «Вы победили в конкурсе!»
- */
 function refreshTimer(step) {
-  var timer = document.getElementById("timer");
-  var time = timer.innerHTML;
+  const timer = document.getElementById("timer");
+  let time = timer.textContent;
 
   setTimeout(function go() {    
     if (time > 0) {
@@ -15,7 +10,7 @@ function refreshTimer(step) {
     	return;
     }
     time--;
-    document.getElementById("timer").innerHTML = time;    
+    document.getElementById("timer").textContent = time;
   }, step);
 }
 

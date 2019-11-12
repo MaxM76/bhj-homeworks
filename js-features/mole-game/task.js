@@ -1,6 +1,6 @@
-var hitCounter = document.getElementById("dead");
+const hitCounter = document.getElementById("dead");
 var hitCount = hitCounter.textContent;
-var missCounter = document.getElementById("lost");
+const missCounter = document.getElementById("lost");
 var missCount = missCounter.textContent;
 
 function getHole(index) {
