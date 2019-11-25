@@ -16,14 +16,17 @@ class Game {
     this.lossElement.textContent = 0;
   }
 
+  doKeyDownEvent() {
+    if (event.key.toLowerCase() == this.currentSymbol.textContent.toLowerCase()) {
+      this.success();
+    } else {
+      this.fail();
+    }  
+  }
+
   registerEvents() {
-    /*
-      TODO:
-      Написать обработчик события, который откликается
-      на каждый введённый символ.
-      В случае правильного ввода слова вызываем this.success()
-      При неправильном вводе символа - this.fail();
-     */
+    document.addEventListener("keydown", this.doKeyDownEvent.bind(this));
+
   }
 
   success() {
@@ -86,5 +89,4 @@ class Game {
   }
 }
 
-new Game(document.getElementById('game'))
-
+new Game(document.getElementById('game'));
